@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="nav_bar">
+      <input type="checkbox" class="checkbox" id="check" />
+      <a href="https://juniv.edu/" target="_blank" style="text-decoration: none"
+        ><img
+          id="header-img"
+          src="lo.jpeg"
+          alt="University Logo"
+          style="width: 100px; height: 70px; margin-left: 20px"
+      /></a>
+
+      <h1 class="nav-head">Fatema Rimi</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#cv">CV</a></li>
+
+        <a href="#contact"><button class="contact_btn">Contact Me</button></a>
+      </ul>
+      <!-- Search Box and Theme Toggle -->
+     
+<div 
+  class="search-theme-container" 
+  style="display: flex; align-items: center; justify-content: flex-start; gap: 15px; padding: 20px;">
+  
+  <!-- Search Button -->
+  <button 
+    id="search-btn" 
+    style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: #e9e6e6;">
+    <i class="fas fa-search"></i>
+  </button>
+  
+  <!-- Search Input -->
+  <input 
+    type="text" 
+    id="search-input" 
+    style="display: none; padding: 5px 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;" 
+    placeholder="Search..." />
+
+  <!-- Theme Toggle Button -->
+  <button 
+    id="theme-toggle" 
+    style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: #858181;">
+    <i class="fas fa-moon"></i>
+  </button>
+</div>
+
+<!-- Inline JavaScript -->
+<script>
+  // JavaScript for Search Button
+  const searchBtn = document.getElementById("search-btn");
+  const searchInput = document.getElementById("search-input");
+  searchBtn.addEventListener("click", () => {
+    if (searchInput.style.display === "none") {
+      searchInput.style.display = "block";
+      searchInput.focus();
+    } else {
+      searchInput.style.display = "none";
+    }
+  });
+
+  // JavaScript for Theme Toggle
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+
+    // Update the icon
+    const icon = themeToggle.querySelector("i");
+    if (body.classList.contains("dark-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+      body.style.backgroundColor = "#222";
+      body.style.color = "#f4f4f4";
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+      body.style.backgroundColor = "#f4f4f4";
+      body.style.color = "#333";
+    }
+  });
+
+  // Set default theme on page load
+  window.onload = () => {
+    body.classList.add("light-mode"); // Default to light mode
+  };
+</script>
+
+
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+    <section id="home" class="home">
+      <div style="text-align: center">
+        <img
+          src="myPic.jpg"
+          alt="Fatema Rimi"
+          style="width: 300px; border-radius: 10px; margin-bottom: 10px"
+        />
+        <p>
+          Fatema Rimi <br />
+          Undergraduate Student <br />Department of Computer Science and
+          Engineering <br />Jahangirnagar University.
+        </p>
+      </div>
+      <!-- <img src="myPic.jpg" width="450px" height="400px" alt="" />
+      <p class="home-text">Welcome to my portfolio! I'm an enthusiastic undergraduate student passionate about technology and innovation.</p> -->
+      <div class="description">
+        <h2>About</h2>
+        <p>
+          I'm a <span>Undergraduate Student</span> .Currently I am studying CSE
+          at <span>Jahangirnagar University</span>. Throughout my studies, I’ve
+          developed a strong foundation in programming languages such as C/C++,
+          Java, and web technologies including HTML, CSS, JavaScript, and MySQL.
+          I’m dedicated to deepening my expertise and applying my skills to
+          impactful projects and real-world challenges. <br />
+
+          Thank you for visiting my website! I hope you enjoy exploring my
+          academic journey, skills, and passion for technology and programming.
+        </p>
+        <div class="font">
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/profile.php?id=100070440454582&mibextid=kFxxJD"
+            target="_blank"
+            title="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Rimi-351" target="_blank" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <!-- Gmail -->
+          <a href="mailto:fatemarimi2020@gmail.com" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+          <!-- Phone Number -->
+          <a href="tel:+8801810825804" title="Call">
+            <i class="fa-solid fa-phone-alt"></i>
+          </a>
+          <!-- Instragram -->
+          <a
+            href="https://www.instagram.com/fatemarimi4/profilecard/?igsh=YTh4cG1zNDM1Y2Zn"
+            title="Instragram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- LinkedIn -->
+          <!-- <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a> -->
+          <!--  <i class="fa-brands fa-instagram"><a href=""></a></i> 
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-linkedin-in"></i>
+      <i class="fas fa-phone"></i> -->
+        </div>
+        <div>
+          <button class="btn btn-primary">
+            <a
+              href="cvRimi.pdf"
+              download="cvRimi.pdf"
+              style="text-decoration: none; color: white"
+              >Download CV</a
+            >
+          </button>
+        </div>
+
+        <!-- <button><a href=""></a> Download CV</button> -->
+      </div>
+    </section>
+    <script src="script.js"></script>
+
+    <!-- Projects Section (Start) -->
+    <section id="projects" class="py-5 bg-light">
+      <br /><br />
+      <div class="container">
+        <h2 class="text-center mb-4">Projects</h2>
+        <hr class="w-25 mx-auto" />
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="freeCodeCampCertificate.png"
+                class="card-img-top"
+                alt="Web Design Certification"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Web Design Certification - FreeCodeCamp
+                </h5>
+                <p class="card-text">
+                  Completed a certification and currently developing projects
+                  with HTML and CSS, applying refined web design techniques and
+                  best practices.
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/freeCodeCampAllCerticifationProjects"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="tictactoe.png"
+                class="card-img-top"
+                alt="Tic Tac Toe Game"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tic Tac Toe Game</h5>
+                <p class="card-text">
+                  Created an interactive Tic Tac Toe game using HTML, CSS, and
+                  JavaScript, designed with a smooth, user-friendly interface.
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/Tic-Tac-Toe"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="proLand.png"
+                class="card-img-top"
+                alt="production-page"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Production-page</h5>
+                <p class="card-text">
+                  The "Classic Books" webpage, created with HTML and CSS,
+                  showcases premium book features with icons and descriptions,
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/productLandingFreeCC"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="cafe.png"
+                class="card-img-top"
+                alt="Camper Cafe-Project"
+              />
+              <div class="card-body">
+                <h5 class="card-title">E-commerce-Project</h5>
+                <p class="card-text">
+                  Created an interactive E-commerce-project using HTML, CSS, and
+                  JavaScript, designed with a smooth, user-friendly interface.
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/Cafe_FCC"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="balance.png" class="card-img-top" alt="medicine shop" />
+              <div class="card-body">
+                <h5 class="card-title">Medicine Shop</h5>
+                <p class="card-text">
+                  OOP-based C++ console application built in the first year,
+                  applying key OOP principles for modularity.
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/BalanceSheet"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="CSS Color Markers.png"
+                class="card-img-top"
+                alt="Color MArker project"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Color MArker Project(FreeCodeCamp)</h5>
+                <p class="card-text">
+                  Currently developing projects with HTML and JavaScript,
+                  applying refined web design techniques and best practices.
+                </p>
+                <a
+                  href="https://github.com/Rimi-351/colorMarkerFCC"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View on GitHub ➲</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (End) -->
+
+    <!-- cv section -->
+    <!-- CV Section -->
+    <section id="cv"><div class="container my-5">
+        <div class="cv-section">
+          <h2 class="text-center">Curriculum Vitae</h2>
+          <hr class="mb-4" />
+  
+          <!-- Personal Information -->
+          <div class="personal-info">
+            <br />
+            <h4>Personal Information</h4>
+            <p><strong>Name:</strong> Fatema Akter Rimi</p>
+            <p><strong>Email:</strong> fatemarimi2020@gmail.com</p>
+            <p><strong>Phone:</strong> +8801810825804</p>
+            <p><strong>Address:</strong> East Dhania, Savar, Dhaka</p>
+          </div>
+  
+          <!-- Education Table -->
+          <br /><br /><br />
+          <h4>Educational Background</h4>
+          <br />
+          <h5>Bachelor of Science(Till 2nd Year)</h5>
+          <p>
+            <span style="color: rgb(50, 146, 146)"
+              >Department of Computer Science and Engineering</span
+            >
+            <br />Result:3.93 out of 4.00 <br />
+            Year :2022-running
+          </p>
+          <br />
+          <h5>Higher Secondary Certificate</h5>
+          <p>
+            BPATC School and College <br />Group:
+            <span style="color: rgb(50, 146, 146)">Science</span><br />Result:5.00
+            out of 5.00 <br />
+            Year :2018-2020
+          </p>
+          <br />
+          <h5>Secondary School Certificate</h5>
+          <p>
+            BPATC School and College <br />Group:
+            <span style="color: rgb(50, 146, 146)">Science</span><br />Result:5.00
+            out of 5.00 <br />
+            Year :2013-2018
+          </p>
+        </div>
+      </div></section>
+    
+
+    <!-- <div class="cv-section py-5 bg-light" id="cv">
+    <div class="container">
+        <h2 class="text-center text-dark mb-4">Curriculum Vitae</h2>
+        <hr class="bg-dark mx-auto" style="width: 90px;">
+        <div class="row align-items-center"> Profile Image
+            
+            <div class="col-md-4 text-center">
+                <img src="myPic.jpg" alt="Profile Image" class="rounded-circle img-fluid" style="width: 200px; height: 200px; object-fit: cover;">
+            </div> Personal Information -->
+    <!-- <div class="col-md-8">
+                <h3 class="text-dark">Fatema Akter</h3>
+                <p class="text-muted">Undergraduate Student | Problem Solver | Tech Enthusiast</p>
+                <p>
+                    Hello! I am a passionate software developer skilled in creating dynamic, user-friendly web applications. 
+                    I specialize in front-end and back-end development, ensuring seamless user experiences.
+                </p> -->
+
+    <!-- Download CV Button -->
+    <!-- <button class="btn btn-primary btn-lg">
+                    <a href="cvRimi.pdf" download="cvRimi.pdf" class="text-white text-decoration-none">Download CV</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> -->
+    -->
+    <!-- cv section end -->
+
+    <!--Contact Section (start)-->
+    <div class="contact-section py-5" id="contact">
+      <div class="container">
+        <h2 class="text-center text-dark mb-4">Contact</h2>
+        <hr class="bg-dark mx-auto" style="width: 90px" />
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <!-- Form using Formspree action URL -->
+            <form
+              action="https://formspree.io/f/xrbgkreo"
+              method="POST"
+              class="p-4 bg-dark text-white rounded"
+            >
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Contact Section (end)-->
+
+    <section id="cv" class="cv"></section>
+    <!-- Footer1 (Social Media Links with Icons) -->
+    <div class="rimi">
+      <div class="footer text-white py-4">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a href="https://github.com/Rimi-351" class="footer-link"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+            </div>
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=100070440454582&mibextid=kFxxJD"
+                class="footer-link"
+                ><i class="fab fa-facebook"></i> Facebook</a
+              >
+            </div>
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a
+                href="https://www.instagram.com/fatemarimi4/profilecard/?igsh=YTh4cG1zNDM1Y2Zn"
+                class="footer-link"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a
+                href="https://codeforces.com/profile/Sparkling_Daystar"
+                class="footer-link"
+                ><i class="fas fa-code"></i> Codeforces</a
+              >
+            </div>
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a
+                href="https://x.com/Rimi169382?t=hJrU1Zv1MmRu-uv_XKZ9Dg&s=09 "
+                class="footer-link"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </div>
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a href="mailto:fatemarimi2020@gmail.com" class="footer-link"
+                ><i class="fas fa-envelope"></i> Email</a
+              >
+            </div>
+            <div class="col-md-3 col-sm-6 mb-2">
+              <a href="tel:+8801810825804" class="footer-link"
+                ><i class="fas fa-phone"></i> Call</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer2 (Copyright and Back to Top) -->
+    <div class="footer bg-dark text-success py-3">
+      <div class="container text-center" id="footer2">
+        <div class="row">
+          <div class="col-md-10 col-sm-8">
+            <p class="mb-0">
+              &copy; Copyright 2024 by Fatema Rimi. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <a href="#home" class="footer-top-link">TOP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (for navbar functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
